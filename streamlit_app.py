@@ -10,22 +10,40 @@ from modules.ensemble_utils import SnapshotANNEnsemble, WeightedAverageEnsemble
 FEATURES = ['Age', 'Gender', 'Race', 'BMI', 'GCS', 'ISS', 'Charlson_Comorbidity_Index']
 NUMERICAL = ['Age', 'BMI', 'GCS', 'ISS', 'Charlson_Comorbidity_Index']
 CATEGORICAL = ['Gender', 'Race']
-MODEL_PATHS = {
+"""MODEL_PATHS = {
     'XGBoost': "saved_models/xgb_model.pkl",
     'SVM': "saved_models/svm_model.pkl",
     'ANN': "saved_models/ann_model.pkl",
     'Weighted XGB+ANN': "saved_models/XGB+ANN_ensemble_model_weighted.pkl",
     'Weighted XGB+ANN+SVM': "saved_models/XGB+ANN+SVM_ensemble_model_weighted.pkl",
     'XGB + Snapshot ANN': "saved_models/snapshot_ensemble_model.pkl",
-}
+}"""
 
 # Load Models 
-def load_models():
+"""def load_models():
     models = {}
     for name, path in MODEL_PATHS.items():
         with open(path, 'rb') as f:
             models[name] = pickle.load(f)
-    return models
+    return models"""
+
+# Load the trained model
+with open("snapshot_ensemble_model.pkl", "rb") as f:
+    loaded_rf = pickle.load(f)
+with open("svm_model.pkl", "rb") as f:
+    loaded_rf = pickle.load(f)
+with open("xgb_model.pkl", "rb") as f:
+    loaded_rf = pickle.load(f)
+with open("ann_model.pkl", "rb") as f:
+    loaded_rf = pickle.load(f)
+with open("XGB_ANN_SVM_ensemble_model_weighted.pkl", "rb") as f:
+    loaded_rf = pickle.load(f)
+with open("XGB+ANN_ensemble_model_weigted.pkl", "rb") as f:
+    loaded_rf = pickle.load(f)
+
+
+
+
 
 # Build UI
 st.set_page_config(page_title="LOS Predictor", layout="wide")
