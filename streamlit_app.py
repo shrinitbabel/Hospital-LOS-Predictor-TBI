@@ -14,6 +14,9 @@ MODEL_PATHS = {
     'XGBoost': "saved_models/xgb_model.pkl",
     'SVM': "saved_models/svm_model.pkl",
     'ANN': "saved_models/ann_model.pkl",
+    'Weighted XGB+ANN': "saved_models/XGB+ANN_ensemble_model_weighted.pkl",
+    'Weighted XGB+ANN+SVM': "saved_models/XGB+ANN+SVM_ensemble_model_weighted.pkl",
+    'XGB + Snapshot ANN': "saved_models/snapshot_ensemble_model.pkl",
 }
 
 # Load Models 
