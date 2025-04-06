@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import pickle
 from modules.data_loader import build_preprocessor
+from modules.ensemble_utils import SnapshotANNEnsemble, WeightedAverageEnsemble
+
 
 # === Constants ===
 FEATURES = ['Age', 'Gender', 'Race', 'BMI', 'GCS', 'ISS', 'Charlson_Comorbidity_Index']
