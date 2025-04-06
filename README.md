@@ -63,7 +63,7 @@ Hospital-LOS-Predictor-TBI/
 
 - **Statistical Analysis**: Run the `preliminary_statistical_analysis.ipynb` notebook to perform feature significance tests and generate LOS summaries.
 - **Model Training**: Use the `supervised_learning.ipynb` notebook to train machine learning models and evaluate their performance.
-- **Interactive Predictions**: Launch the Streamlit app for predictions:
+- **Interactive Predictions**: Launch the Streamlit app for predictions: (UNDER CONSTRUCTION!)
      ```bash
      streamlit run streamlit_app.py
      ```
