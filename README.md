@@ -70,7 +70,7 @@ Hospital-LOS-Predictor-TBI/
 
 ## License
 
-This project is licensed under the terms of the [LICENSE](./LICENSE) file.
+This project is licensed under the terms of the [MIT License](https://github.com/shrinitbabel/Hospital-LOS-Predictor-TBI/blob/main/LICENSE) file.
 
 ## Contact
 shrinitbabel at gmail dot com
