@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import ttest_ind, chi2_contingency
 
-# === Significance tests ===
+# Significance tests
 def run_feature_tests(df: pd.DataFrame, features: list, target='Hospital_LOS_Category'):
     plos = df[df[target] == 1]
     normal = df[df[target] == 0]
@@ -27,7 +27,7 @@ def run_feature_tests(df: pd.DataFrame, features: list, target='Hospital_LOS_Cat
         'Feature', 'Test', 'PLOS Value', 'Normal LOS Value', 'Statistic', 'P-value', 'Significant'
     ])
 
-# === LOS Median & IQR ===
+# LOS Median & IQR
 def summarize_los(df: pd.DataFrame, target='Hospital_LOS_Category', los_col='Hospital LOS Days'):
     grouped = df.groupby(target)[los_col].agg([
         'median',
@@ -37,7 +37,7 @@ def summarize_los(df: pd.DataFrame, target='Hospital_LOS_Category', los_col='Hos
     grouped.columns = ['Median', '25th Percentile', '75th Percentile']
     return grouped
 
-# === Table 1 Generator ===
+# Breakdown of LOS by category
 def generate_table1(df: pd.DataFrame, num_cols: list, cat_cols: list, target='Hospital_LOS_Category'):
     def summarize_num(series):
         med = series.median()

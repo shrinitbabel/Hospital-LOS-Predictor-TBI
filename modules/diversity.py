@@ -102,14 +102,13 @@ def calculate_decomposition(models, X, y, n_samples=5):
     for idx_set in indices:
         X_train, y_train = X[idx_set], y[idx_set]
         for model_name, model in models.items():
-            if isinstance(model, list):  # Snapshot Ensemble Case
-                # Directly use the precomputed snapshot ensemble predictions
+            if isinstance(model, list): 
                 snapshots = model
                 snapshot_preds = snapshot_predict(snapshots, X)
                 predictions[model_name].append(snapshot_preds)
-            elif isinstance(model, np.ndarray):  # Precomputed Predictions (e.g., snapshot_probs)
+            elif isinstance(model, np.ndarray): 
                 predictions[model_name].append(model)
-            else:  # Regular scikit-learn model
+            else:  
                 model_clone = clone(model)
                 model_clone.fit(X_train, y_train)
                 predictions[model_name].append(model_clone.predict(X))
