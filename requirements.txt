@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+xgboost
+streamlit
+tensorflow
+scikeras
+imbalanced-learn
+scikit-posthocs
+matplotlib
