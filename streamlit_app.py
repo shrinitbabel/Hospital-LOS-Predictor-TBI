@@ -20,7 +20,6 @@ MODEL_PATHS = {
 }
 
 # === Load Models ===
-@st.cache_resource
 def load_models():
     models = {}
     for name, path in MODEL_PATHS.items():
