@@ -46,7 +46,7 @@ input_df = pd.DataFrame([user_input])
 
 # === Preprocess ===
 preprocessor = build_preprocessor(NUMERICAL, CATEGORICAL)
-X_input = preprocessor.fit(pd.DataFrame(columns=FEATURES)).transform(input_df)
+X_input = preprocessor.fit_transform(input_df)
 
 # === Predict ===
 models = load_models()
