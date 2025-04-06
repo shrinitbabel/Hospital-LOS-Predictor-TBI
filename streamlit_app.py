@@ -28,19 +28,27 @@ CATEGORICAL = ['Gender', 'Race']
     return models"""
 
 # Load the trained model
-with open("snapshot_ensemble_model.pkl", "rb") as f:
-    loaded_rf = pickle.load(f)
-with open("svm_model.pkl", "rb") as f:
-    loaded_rf = pickle.load(f)
-with open("xgb_model.pkl", "rb") as f:
-    loaded_rf = pickle.load(f)
-with open("ann_model.pkl", "rb") as f:
-    loaded_rf = pickle.load(f)
-with open("XGB_ANN_SVM_ensemble_model_weighted.pkl", "rb") as f:
-    loaded_rf = pickle.load(f)
-with open("XGB+ANN_ensemble_model_weigted.pkl", "rb") as f:
-    loaded_rf = pickle.load(f)
+with open("saved_models/snapshot_ensemble_model.pkl", "rb") as f:
+    snapshot_model = pickle.load(f)
+with open("saved_models/svm_model.pkl", "rb") as f:
+    svm_model = pickle.load(f)
+with open("saved_models/xgb_model.pkl", "rb") as f:
+    xgb_model = pickle.load(f)
+with open("saved_models/ann_model.pkl", "rb") as f:
+    ann_model = pickle.load(f)
+with open("saved_models/XGB+ANN+SVM_ensemble_model_weighted.pkl", "rb") as f:
+    xgb_ann_svm_model = pickle.load(f)
+with open("saved_models/XGB+ANN_ensemble_model_weighted.pkl", "rb") as f:
+    xgb_ann_model = pickle.load(f)
 
+models = {
+    "XGBoost": xgb_model,
+    "SVM": svm_model,
+    "ANN": ann_model,
+    "Weighted XGB+ANN": xgb_ann_model,
+    "Weighted XGB+ANN+SVM": xgb_ann_svm_model,
+    "XGB + Snapshot ANN": snapshot_model,
+}
 
 
 
