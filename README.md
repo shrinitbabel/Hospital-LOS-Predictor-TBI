@@ -40,7 +40,7 @@ Hospital-LOS-Predictor-TBI/
 ├── preliminary_statistical_analysis.ipynb  # Statistical analysis notebook
 ├── supervised_learning.ipynb               # Machine learning and ensemble modeling notebook
 ├── streamlit_app.py                         # Streamlit app for interactive predictions (UNDER CONSTRUCTION!)
-├── updated_dataset (1).csv                  # Dataset for training and evaluation
+├── updated_dataset (1).csv                  # Dataset for training and evaluation, hidden from public view (Request corresponding author for access)
 ├── requirements.txt                         # Python dependencies
 ├── LICENSE                                  # License file
 └── README.md                                # Project documentation
@@ -72,6 +72,7 @@ Hospital-LOS-Predictor-TBI/
 
 This project is licensed under the terms of the [MIT License](https://github.com/shrinitbabel/Hospital-LOS-Predictor-TBI/blob/main/LICENSE) file.
 
+Original data is available upon request. 
 ## Contact
 shrinitbabel at gmail dot com
 
